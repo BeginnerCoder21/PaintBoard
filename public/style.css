@@ -1,0 +1,208 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    background: #ededed;
+}
+
+.options-cont{
+    height: 80px;
+    width: 80px;
+    position: absolute;
+    border-radius: 150px;
+    top: 30px;
+    left: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    z-index: 1;
+    cursor: pointer;
+    background: #ededed;
+    box-shadow:  19px 19px 38px #c9c9c9,
+             -19px -19px 38px #ffffff;
+}
+.tools-cont{
+    display: flex;
+    height: 60px;
+    width:590px;
+    font-size: 25px;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 43px;
+    left: 200px;
+    padding: 20px;
+    justify-content: space-around;
+    border-radius: 10px;
+    background: #ededed;
+    box-shadow:  16px 16px 46px #c9c9c9,
+             -16px -16px 46px #ffffff;
+}
+.tools-cont> *{
+    display: block;
+    z-index: 1;
+}
+.tools-cont i:active,.tools-cont i:hover{
+    background-color: #f6c900;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+
+}
+.pencil-tool-cont{
+    height: 100px;
+    width: 90px;
+    position: absolute;
+    top: 103px;
+    left: 210px;
+    display: none;
+    border-radius: 0px 0px 10px 10px;
+    background: #ededed;
+    box-shadow: inset -16px -16px 32px #ffffff,
+            inset -16px 16px 32px #cecece;
+}
+.pencil-width-cont{
+    transform-origin: 50px 49px;
+    transform: rotate(-90deg);
+    border-radius: 10px 0px 0px 0px;
+    height: 30px;
+}
+.pencil-width-cont input{
+    width: 85%;
+    accent-color: #011387;
+}
+.pencil-width-cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pencil-color-cont{
+    position: absolute;
+    display: flex;
+    flex: 50%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 100%;
+    gap: 5px;
+    margin: 0px 0px 0px 35px ;
+}
+.pencil-color{
+    width: 1.6rem;
+    height: 1.6em;
+    border-radius: 50%;
+}
+.pencil-color:hover{
+    height: 1.3rem;
+    width: 1.3rem;
+    outline: 2px rgb(226, 226, 226) solid;
+}
+.black{
+    background-color: black;
+}
+.blue{
+    background-color: blue;
+}
+.red{
+    background-color: red;
+}
+.eraser-tool-cont{
+    height: 50px;
+    width: 100px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 128px;
+    left: 290px;
+    transform: rotate(-90deg);
+    border-radius: 10px 0px 0px 10px;
+    background: #ededed;
+    box-shadow: inset 16px -16px 32px #ffffff,
+            inset -16px 16px 32px #cecece;
+}
+.eraser-tool-cont input{
+    width: 85%;
+    accent-color: #011387;
+}
+.scale-tools{
+    animation-name: scale-tools;
+    animation-duration: 1s;
+}
+@keyframes scale-tools {
+    0%{
+        transform: scale(0.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.sticky-cont{
+    height: 250px;
+    width: 280px;
+    background-color: rgba(255, 227, 134, 0.985);
+    position: absolute;
+    top: 15rem;
+    left: 15rem;
+}
+.header-cont{
+    height: 40px;
+    background-color: rgba(255, 227, 134, 0.985);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+}
+.header-cont > * {
+    height: 1rem;
+    width: 1rem;
+    margin-right: 0.5rem;
+}
+.note-cont{
+    height: calc(100% - 40px);
+}
+.minimize{
+    background-color: rgb(0, 210, 60);
+    cursor: pointer;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+}
+.remove{
+    background-color: rgb(226, 0, 0);
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+}
+.header-cont > .line{
+    margin: 0;
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    top: 40px;
+    background-color: rgba(84, 84, 84, 0.352);
+}
+textarea{
+    height: 100%;
+    width: 100%;
+    resize: none;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    padding: 10px;
+    font-family: 'Open sans';
+    background-color: rgba(255, 227, 134, 0.985);
+}
+img{
+    height: 100%;
+    width: 100%;
+}

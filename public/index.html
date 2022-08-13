@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paint Your Soul</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;331;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="options-cont animate__slideInLeft">
+        <i class="fa-solid fa-bars-staggered"></i>
+    </div>
+    <div class="tools-cont scale-tools">
+        <i class="fa-solid fa-pencil" id="pencil"></i>
+        <i class="fa-solid fa-eraser" id="eraser"></i>
+        <i class="download-tool fas fa-download"></i>
+        <i class="fa-solid notes-tool fa-note-sticky"></i>
+        <i class="fa-solid fa-arrow-up-from-bracket"></i>
+        <i class="undo-tool fa-solid fa-rotate-left"></i>
+        <i class="redo-tool fa-solid fa-rotate-right"></i>
+    </div>
+
+    <div class="pencil-tool-cont">
+        <div class="pencil-width-cont">
+            <input type="range" min="2" max="10" value="2" class="pencil-width">
+        </div>
+        <div class="pencil-color-cont">
+            <div class="black pencil-color"></div>
+            <div class="red pencil-color"></div>
+            <div class="blue pencil-color"></div>
+        </div>
+    </div>
+
+    <div class="eraser-tool-cont">
+        <input type="range" min="2" max="5" value="2" class="eraser-width">
+    </div>
+    <!-- <div class="download-tool"></div>
+    <div class="notes-tool"></div>
+    <div class="upload-tool"></div>
+    <div class="redo-tool"></div>
+    <div class="undo-tool"></div> -->
+
+    <canvas></canvas>
+    <script src="https://cdn.socket.io/3.1.3/socket.io.min.js"
+        integrity="sha384-cPwlPLvBTa3sKAgddT6krw0cJat7egBga3DJepJyrLl4Q9/5WLra3rrnMcyTyOnh"
+        crossorigin="anonymous"></script>
+    <script>
+        //Connect frontend to backend
+        let socket = io.connect("http://localhost:3000/");
+    </script>
+    <script src="./features.js"></script>
+    <script src="./canvas.js"></script>
+</body>
+
+</html>
