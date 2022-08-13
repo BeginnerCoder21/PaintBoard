@@ -1,2 +1,2 @@
 # PaintBoard
-This is a PaintBoard developed using HTML, CSS and JS with Node.js as backend.
+This is a PaintBoard developed using HTML, CSS and JS with Node.js as backend. It is not responsive yet!!
